@@ -8,7 +8,7 @@ module.exports = {
     S3: {
         auth: {
             region: {
-                doc: 'The AWS region to connect against',
+                doc: 'The AWS region where you want to use S3',
                 format: String,
                 env: 'AWS_REGION'
             },
@@ -50,6 +50,7 @@ module.exports = {
             port: {
                 doc: 'The logstash port to connect to (UDP).',
                 format: Number,
+                env: 'LOGSTASH_PORT'
                 default: 5000
             },
             /* eslint-disable camelcase */
