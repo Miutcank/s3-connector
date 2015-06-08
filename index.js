@@ -4,8 +4,8 @@ var AWSConnector = require('aws-connector');
 
 module.exports = function S3ConnectorConstructor(bucketName) {
     var s3 = this;
-	var AWS_AUTH = config.S3.auth;
-	var BUCKET_NAME = bucketName || config.S3.bucket;
+    var AWS_AUTH = config.S3.auth;
+    var BUCKET_NAME = bucketName || config.S3.bucket;
 
     AWSConnector.s3.configure(AWS_AUTH);
     s3.connection = AWSConnector.s3.connect();
@@ -39,7 +39,7 @@ module.exports = function S3ConnectorConstructor(bucketName) {
     // put object
     s3.putObject = function putObject(key, content){
         if (!key || !content) {
-			log.error('Required arguments are missing');
+            log.error('Required arguments are missing');
             throw new Error('Required arguments are missing');
         }
         if (!Buffer.isBuffer(content)) {
