@@ -37,7 +37,7 @@ module.exports = function S3ConnectorConstructor(bucketName) {
     };
 
     // put object
-    s3.putObject = function putObject(key, content){
+    s3.putObject = function putObject(key, content, expiresOn){
         if (!key || !content) {
             log.error('Required arguments are missing');
             throw new Error('Required arguments are missing');
@@ -50,6 +50,9 @@ module.exports = function S3ConnectorConstructor(bucketName) {
             Key: key,
             Body: content
         };
+        if (expiresOn) {
+            params.Expires = expiresOn;
+        }
         return s3.connection.putObject(params)
             .catch(function handleError(e) {
                 log.error({error: e}, 'Error in putObject');

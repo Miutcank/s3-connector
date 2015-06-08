@@ -1,6 +1,6 @@
 {
   "name": "s3-connector",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "S3 connector with Bluebird promises and Bunyan logging",
   "main": "index.js",
   "scripts": {
