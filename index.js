@@ -2,8 +2,7 @@ var config = require('./config');
 var log = require('./utils/logger')();
 var AWSConnector = require('aws-connector');
 
-module.exports = function S3ConnectorConstructor(bucketName) {
-    var s3 = this;
+var s3 = module.exports = function S3ConnectorConstructor(bucketName) {
     var AWS_AUTH = config.S3.auth;
     var BUCKET_NAME = bucketName || config.S3.bucket;
 
