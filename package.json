@@ -1,6 +1,6 @@
 {
   "name": "s3-connector",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "S3 connector with Bluebird promises and Bunyan logging",
   "main": "index.js",
   "scripts": {
@@ -8,6 +8,10 @@
     "test": "gulp test",
     "precommit": "gulp lint",
     "prepush": "gulp test"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Miutcank/s3-connector.git"
   },
   "author": {
     "name": "miutcank",
