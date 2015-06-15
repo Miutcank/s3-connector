@@ -14,8 +14,10 @@ module.exports = function createLogger(){
 				tags: ['bunyan', 's3-connector']
 			})
 			.on('error', function func(err) {
+				/* eslint-disable */
 				console.error('[rabbitmq-connector] Error in bunyan-logstash-tcp stream');
 				console.error(err);
+				/* eslint-enable */
 			})
 		},
 		{
